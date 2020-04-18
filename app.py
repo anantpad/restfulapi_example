@@ -16,6 +16,10 @@ app.config["MONGO_URI"] = "mongodb://sridhar:asdf@cluster0-shard-00-00-aou9c.mon
 # app.config["MONGO_URI"] = "mongodb://sridhar:asdf@cluster0-aou9c.mongodb.net/test?retryWrites=true&w=majority"
 mongo = PyMongo(app)
 
+@app.route("/", methods = ['GET', 'POST'])
+def home():
+    return render_template("index.html")
+
 @app.route("/<a>/home", methods = ['GET', 'POST'])
 def ajax(a):
     print(a)
