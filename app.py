@@ -26,7 +26,7 @@ def ajax(a):
 
 @app.route("/another", methods = ['GET', 'POST'])
 def another():
-    books = {"a":"b"}
+    books = {"a":"b", "c":"d"}
     return jsonify(books)
 
 
