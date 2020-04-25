@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 def home():
     return render_template("index.html")
 
-@app.route("/<a>/home", methods = ['GET', 'POST'])
+@app.route("/<a>", methods = ['GET', 'POST'])
 def ajax(a):
     print(a)
     if a == "sridhar":
